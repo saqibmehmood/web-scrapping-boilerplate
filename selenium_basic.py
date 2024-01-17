@@ -9,6 +9,24 @@ import time
 # ChromeDriverManager automatically downloads the driver binary and sets the path
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
+### Using Proxy with Selenium ###
+# PROXY details
+# PROXY = "107.1.93.217:80"
+#
+# chrome_options = webdriver.ChromeOptions()
+#
+# # Proxy configuration
+# chrome_options.add_argument(f'--proxy-server={PROXY}')
+#
+# # Additional options for better stability and performance
+# chrome_options.add_argument('--disable-gpu')
+# chrome_options.add_argument('--no-sandbox')
+# chrome_options.add_argument('--disable-dev-shm-usage')
+#
+# # Initialize WebDriver with ChromeOptions
+# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+####
 def get_weather(location):
     try:
         # Open the weather.com homepage
