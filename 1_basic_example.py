@@ -33,7 +33,9 @@ html_content = """
 soup = BeautifulSoup(html_content, 'html.parser')
 
 print(soup)
-
+li_tags = soup.find_all('li')
+for li_tag in li_tags:
+    print(li_tag.text)
 
 
 # # Extracting and printing the title
